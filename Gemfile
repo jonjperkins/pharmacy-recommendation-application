@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'figaro'
 gem 'devise'
 gem 'pg', '~> 0.18.2'
 gem 'rails',                   '4.2.2'
