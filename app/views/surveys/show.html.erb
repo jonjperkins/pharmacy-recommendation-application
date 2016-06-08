@@ -1,0 +1,14 @@
+year: <%= @survey.year %><br>
+number of times helped: <%= @survey.times_helped %><br>
+did you make an intervention? <%= @survey.intervention_made %><br>
+
+did you make a contribution? <%= @survey.contribution_made %><br>
+rec description: <%= @survey.recommendation_description %>
+efficacy_recommendations <%= @survey.efficacy_recommendations %><br>
+safety_recommendations: <%= @survey.safety_recommendations %><br>
+contribution to care: <%= @survey.contribution_to_care %><br>
+
+
+
+safety recs:
+<%= @survey.safety_recommendations.to_s %>
