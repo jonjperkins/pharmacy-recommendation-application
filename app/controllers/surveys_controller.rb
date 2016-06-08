@@ -10,10 +10,20 @@ class SurveysController < ApplicationController
     end
     
     def show
-        @survey = Survey.find_by(id: params[:id])
+      @survey = Survey.find(params[:id])
     end
     
     def update
+      @survey = Survey.find(params[:id])
+      if @survey.update_attributes(survey_params)
+        redirect_to @survey
+      else
+        render 'edit'
+      end
+    end
+    
+    def edit
+        @survey = Survey.find(params[:id])
     end
     
     private

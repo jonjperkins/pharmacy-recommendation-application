@@ -1,14 +1,22 @@
-year: <%= @survey.year %><br>
-number of times helped: <%= @survey.times_helped %><br>
-did you make an intervention? <%= @survey.intervention_made %><br>
+<h1>Your responses</h1> 
 
-did you make a contribution? <%= @survey.contribution_made %><br>
-rec description: <%= @survey.recommendation_description %>
-efficacy_recommendations <%= @survey.efficacy_recommendations %><br>
-safety_recommendations: <%= @survey.safety_recommendations %><br>
-contribution to care: <%= @survey.contribution_to_care %><br>
+<h3>Survey last updated at: <%=@survey.updated_at %></h3>
 
+<h2>Year in pharmacy school:</h2>
+  <%= @survey.year %><br>
+<h2>Number of times you've worked at the clinic:</h2> 
+  <%= @survey.times_helped %><br>
+<h2>Did you make an intervention?</h2> 
+  <%= @survey.intervention_made %><br>
+<h2>Did you make a contribution?</h2> 
+  <%= @survey.contribution_made %><br>
+<h2>Recommendation description:</h2>
+  <%= @survey.recommendation_description %>
+<h2>Efficacy recommendations:</h2>
+  <%= @survey.efficacy_recommendations %><br>
+<h2>safety_recommendations:</h2> 
+  <%= @survey.safety_recommendations %><br>
+<h2>Contribution to care:</h2> 
+  <%= @survey.contribution_to_care %><br>
 
-
-safety recs:
-<%= @survey.safety_recommendations.to_s %>
+<h3><%= link_to "Edit your responses", edit_survey_path %></h3>
