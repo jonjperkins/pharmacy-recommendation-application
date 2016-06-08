@@ -9,6 +9,14 @@ class SurveysController < ApplicationController
         redirect_to @survey
     end
     
+    def index
+      @surveys = Survey.order(:year)
+        respond_to do |format|
+          format.html
+          format.csv { send_data @surveys.to_csv, filename: "surveys - #{Date.today}.csv" }
+        end
+    end
+    
     def show
       @survey = Survey.find(params[:id])
     end
