@@ -1,5 +1,11 @@
 class Survey < ActiveRecord::Base
     belongs_to :user
+    
+    validates :year, presence: true
+    validates :times_helped, presence: true
+    validates_presence_of :recommendation_description, :if => 
+               lambda {|u| (intervention_made || contribution_made) == true}
+    
    
     def safety_recommendations=(val)
       write_attribute(:safety_recommendations, val.join(", "))
