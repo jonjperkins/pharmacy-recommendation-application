@@ -1,86 +1,138 @@
-<%= form_for(@survey) do |f| %>
-  <h1>Year in pharmacy school:</h1>
-  <%= f.radio_button :year, '1' %>
-  <%= f.label :year, 'P1' %><br>
-  
-  <%= f.radio_button :year, '2' %>
-  <%= f.label :year, 'P2' %><br>
-  
-  <%= f.radio_button :year, '3' %>
-  <%= f.label :year, 'P3' %><br>
-  
-  <%= f.radio_button :year, '4' %>
-  <%= f.label :year, 'P4' %><br>
-  
-  <h1>How many times have you helped?</h1>
-  <%= f.label :times_helped %>
-  <%= f.number_field :times_helped %><br>
+<div class="container-fluid">
+  <div class="col-sm-8 col-sm-offset-2">
 
-  <h1>Did you make an intervention?</h1>
-  Check if 'yes'
-  <%= f.check_box :intervention_made %><br>
   
-  <h1>Did you make a contribution?</h1>
+  <%= form_for(@survey) do |f| %>
+  <div class="row">
+      <div class="col-lg-6 col-lg-offset-3 well">
+        
+          <h1>Year in pharmacy school:</h1><br>
+          <div class="col-md-3">
+            <%= f.radio_button :year, '1' %>
+            <%= f.label :year, 'P1' %><br>
+          </div>
+          <div class="col-md-3">
+            <%= f.radio_button :year, '2' %>
+            <%= f.label :year, 'P2' %><br>
+          </div>
+          <div class="col-md-3">
+            <%= f.radio_button :year, '3' %>
+            <%= f.label :year, 'P3' %><br>
+          </div>
+          <div class="col-md-3">
+            <%= f.radio_button :year, '4' %>
+            <%= f.label :year, 'P4' %><br>
+          </div>
+        </div>
+      
+  </div>
   
-  Check if 'yes'
-  <%= f.check_box :contribution_made %><br>
-  
-  <h2>Recommendation</h2>
-  
-  <%= f.label :recommendation_description, "Describe your recommendation" %><br>
-  <%= f.text_area :recommendation_description %><br>
-  
-  
-  <h1>efficacy recommendations:</h1><br>
-  Dose too low
-  <%= f.check_box("efficacy_recommendations", {:multiple => true}, "Dose too low", nil) %><br>
-  Dose not frequent enough
-  <%= f.check_box("efficacy_recommendations", {:multiple => true}, "Dose not frequent enough", nil) %><br>
-  Indication education
-  <%= f.check_box("efficacy_recommendations", {:multiple => true}, "Indication education", nil) %><br>  
-  Therapeutic selection
-  <%= f.check_box("efficacy_recommendations", {:multiple => true}, "Therapeutic selection", nil) %><br>  
-  Immunization recommendation
-  <%= f.check_box("efficacy_recommendations", {:multiple => true}, "Immunization recommendation", nil) %><br>
-  None today
-  <%= f.check_box("efficacy_recommendations", {:multiple => true}, "None today", nil) %><br>
-  Other:
-  <%= f.text_area("efficacy_recommendations", {:multiple => true}) %><br>
-  
-  <h1>Safety recommendations:</h1><br>
-  Dose too high
-  <%= f.check_box("safety_recommendations", {:multiple => true}, "Dose too high", nil) %><br>
-  Dose too frequent
-  <%= f.check_box("safety_recommendations", {:multiple => true}, "Dose too frequent", nil) %><br>
-  Adverse event education
-  <%= f.check_box("safety_recommendations", {:multiple => true}, "Adverse event education", nil) %><br>
-  Pregnancy/lactation education
-  <%= f.check_box("safety_recommendations", {:multiple => true}, "Pregnancy/lactation education", nil) %><br>
-  Pediatric safety
-  <%= f.check_box("safety_recommendations", {:multiple => true}, "Pediatric safety", nil) %><br>
-  Identified drug allergy
-  <%= f.check_box("safety_recommendations", {:multiple => true}, "Identified drug allergy", nil) %><br>
-  None today
-  <%= f.check_box("safety_recommendations", {:multiple => true}, "None today", nil) %><br>
-  Other:
-  <%= f.text_area("safety_recommendations", {:multiple => true}) %><br>
-  
-  <h1>Contribution to care:</h1><br>
-  Obtain medical history
-  <%= f.check_box("contribution_to_care", {:multiple => true}, "Obtain medical history", nil) %><br>
-  Provided medication cost information
-  <%= f.check_box("contribution_to_care", {:multiple => true}, "Provided medication cost information", nil) %><br> 
-  Described drug/device administration
-  <%= f.check_box("contribution_to_care", {:multiple => true}, "Described drug/device administration", nil) %><br>
-  Enrolled patient in patient assistance program
-  <%= f.check_box("contribution_to_care", {:multiple => true}, "Enrolled patient in patient assistance program", nil) %><br>
-  Asked about medication adherence
-  <%= f.check_box("contribution_to_care", {:multiple => true}, "Asked about medication adherence", nil) %><br>
-  Counseled patient on medication
-  <%= f.check_box("contribution_to_care", {:multiple => true}, "Counseled patient on medication", nil) %><br>
-  Other:
-  <%= f.text_area("contribution_to_care", {:multiple => true}) %><br>
-  
-  <%= f.submit("Submit") %>
+  <div class="row">
+      <div class="col-lg-6 col-lg-offset-3 well">
+        <h1>How many times have you helped?</h1>
+        <% f.label :times_helped %>
+        <%= f.number_field :times_helped %><br>
+      </div>
+    
+  </div>
 
+  <div class="row">
+      <div class="col-lg-6 col-lg-offset-3 well"> 
+        <h1>Did you make an intervention?</h1>
+          Check if 'yes'
+        <%= f.check_box :intervention_made %><br>
+      </div>
+    
+  </div>
+
+  <div class="row">
+      <div class="col-lg-6 col-lg-offset-3 well"> 
+        <h1>Did you make a contribution?</h1>
+          Check if 'yes'
+        <%= f.check_box :contribution_made %><br>
+      </div>
+  </div>
+  
+  <div class="row">
+      <div class="col-lg-6 col-lg-offset-3 well"> 
+        <h2>Recommendation</h2>
+  
+          <%= f.label :recommendation_description, "Describe your recommendation" %><br>
+          <%= f.text_area :recommendation_description %><br>
+      </div>
+  </div>
+  
+  <div class="row">
+      <div class="col-lg-6 col-lg-offset-3 well"> 
+        <h1>Efficacy recommendations:</h1><br>
+    
+          <%= f.check_box("efficacy_recommendations", {:multiple => true}, "Dose too low", nil) %>
+          Dose too low<br>
+          <%= f.check_box("efficacy_recommendations", {:multiple => true}, "Dose not frequent enough", nil) %>
+          Dose not frequent enough<br>
+          <%= f.check_box("efficacy_recommendations", {:multiple => true}, "Indication education", nil) %>  
+          Indication education<br>
+          <%= f.check_box("efficacy_recommendations", {:multiple => true}, "Therapeutic selection", nil) %>  
+          Therapeutic selection<br>
+          <%= f.check_box("efficacy_recommendations", {:multiple => true}, "Immunization recommendation", nil) %>
+          Immunization recommendation<br>
+          <%= f.check_box("efficacy_recommendations", {:multiple => true}, "None today", nil) %>
+          None today<br>
+          Other:<br>
+          <%= f.text_area("efficacy_recommendations", {:multiple => true}) %>
+        
+      </div>
+    
+  </div>
+  
+  <div class="row">
+
+      <div class="col-lg-6 col-lg-offset-3 well">     
+        <h1>Safety recommendations:</h1><br>
+        <%= f.check_box("safety_recommendations", {:multiple => true}, "Dose too high", nil) %>
+        Dose too high<br>
+        <%= f.check_box("safety_recommendations", {:multiple => true}, "Dose too frequent", nil) %>
+        Dose too frequent<br>
+        <%= f.check_box("safety_recommendations", {:multiple => true}, "Adverse event education", nil) %>
+        Adverse event education<br>
+        <%= f.check_box("safety_recommendations", {:multiple => true}, "Pregnancy/lactation education", nil) %>
+        Pregnancy/lactation education<br>
+        <%= f.check_box("safety_recommendations", {:multiple => true}, "Pediatric safety", nil) %>
+        Pediatric safety<br>
+        <%= f.check_box("safety_recommendations", {:multiple => true}, "Identified drug allergy", nil) %>
+        Identified drug allergy<br>
+        <%= f.check_box("safety_recommendations", {:multiple => true}, "None today", nil) %>
+        None today<br>
+        Other:<br>
+        <%= f.text_area("safety_recommendations", {:multiple => true}) %><br>
+      </div>
+    
+  </div>
+  
+  <div class="row">
+    
+      <div class="col-lg-6 col-lg-offset-3 well"> 
+        <h1>Contribution to care:</h1><br>
+        <%= f.check_box("contribution_to_care", {:multiple => true}, "Obtain medical history", nil) %>
+        Obtained medical history<br>
+        <%= f.check_box("contribution_to_care", {:multiple => true}, "Provided medication cost information", nil) %>
+        Provided medication cost information<br>
+        <%= f.check_box("contribution_to_care", {:multiple => true}, "Described drug/device administration", nil) %>
+        Described drug/device administration<br>
+        <%= f.check_box("contribution_to_care", {:multiple => true}, "Enrolled patient in patient assistance program", nil) %>
+        Enrolled in patient assistance program<br>
+        <%= f.check_box("contribution_to_care", {:multiple => true}, "Asked about medication adherence", nil) %>
+        Asked about medication adherence<br>
+        <%= f.check_box("contribution_to_care", {:multiple => true}, "Counseled patient on medication", nil) %>
+        Counseled patient on medication<br>
+        Other:<br>
+        <%= f.text_area("contribution_to_care", {:multiple => true}) %>
+  </div>
+    
+      </div>
+      <div class="text-center">
+  <%= f.submit "Submit", class: "btn btn-primary btn-lg" %>
+      </div>
 <% end %>
+</div>
+</div>
