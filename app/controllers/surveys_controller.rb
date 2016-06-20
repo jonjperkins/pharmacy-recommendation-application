@@ -7,7 +7,8 @@ class SurveysController < ApplicationController
     def create
         @survey = Survey.create(survey_params)
         if @survey.save
-          flash[:success] = "Survey submitted!"
+          flash[:success] = "Your survey responses have been submitted. If you 
+                             need to edit your submissions, use the edit button below."
           redirect_to @survey
         else
           flash[:danger] = "Some information is still needed."
@@ -31,8 +32,10 @@ class SurveysController < ApplicationController
     def update
       @survey = Survey.find(params[:id])
       if @survey.update_attributes(survey_params)
-        redirect_to @survey
+        flash[:success] = "Your survey responses were successfully updated."
+        redirect_to root_url
       else
+        flash[:danger] = "Some information is still needed."
         render 'edit'
       end
     end

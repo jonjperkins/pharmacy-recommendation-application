@@ -1,22 +1,28 @@
-<h1>Your responses</h1> 
+<div class="container-fluid">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h1>Your responses</h1> 
+    <h5><small>Survey last updated: <%=@survey.updated_at.strftime("%B %d, %Y %H:%m UTC") %></small></h5><br>
+    <%= link_to "I'm done!", root_url, class: "btn btn-primary btn-lg" %><br>
+    <br>
+    <div class = "well">
+      <%= link_to "Edit my responses", edit_survey_path %><br><br>
 
-<h3>Survey last updated at: <%=@survey.updated_at %></h3>
-
-<h2>Year in pharmacy school:</h2>
-  <%= @survey.year %><br>
-<h2>Number of times you've worked at the clinic:</h2> 
-  <%= @survey.times_helped %><br>
-<h2>Did you make an intervention?</h2> 
-  <%= @survey.intervention_made %><br>
-<h2>Did you make a contribution?</h2> 
-  <%= @survey.contribution_made %><br>
-<h2>Recommendation description:</h2>
-  <%= @survey.recommendation_description %>
-<h2>Efficacy recommendations:</h2>
-  <%= @survey.efficacy_recommendations %><br>
-<h2>safety_recommendations:</h2> 
-  <%= @survey.safety_recommendations %><br>
-<h2>Contribution to care:</h2> 
-  <%= @survey.contribution_to_care %><br>
-
-<h3><%= link_to "Edit your responses", edit_survey_path %></h3>
+      <h4>Year in pharmacy school:</h4>
+      <%= @survey.year %><br>
+      <h4>Number of times you've worked at the clinic:</h4> 
+      <%= @survey.times_helped %><br>
+      <h4>Did you make an intervention?</h4> 
+      <%= @survey.intervention_made %><br>
+      <h4>Did you make a contribution?</h4> 
+      <%= @survey.contribution_made %><br>
+      <h4>Recommendation description:</h4>
+      <%= @survey.recommendation_description %><br>
+      <h4>Efficacy recommendations:</h4>
+      <%= @survey.efficacy_recommendations %><br>
+      <h4>Safety recommendations:</h4> 
+      <%= @survey.safety_recommendations %><br>
+      <h4>Contribution to care:</h4> 
+      <%= @survey.contribution_to_care %><br>
+    </div>
+  </div>
+</div>
