@@ -1,5 +1,5 @@
 class Survey < ActiveRecord::Base
-    belongs_to :user
+   
     
     validates :year, presence: true
     validates :times_helped, presence: true
