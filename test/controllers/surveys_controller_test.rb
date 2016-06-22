@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SurveysControllerTest < ActionController::TestCase
  
-  test "returns a csv file" do 
+  test "should return a csv file" do 
     get :index, format: :csv
     assert_response :success
     assert_equal "text/csv", response.content_type

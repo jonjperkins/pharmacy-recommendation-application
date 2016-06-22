@@ -11,7 +11,6 @@ class SurveysController < ApplicationController
                          need to edit your submissions, use the edit button below."
       redirect_to @survey
     else
-      flash[:danger] = "Some information is still needed."
       render 'new'
     end
   end
