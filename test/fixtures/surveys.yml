@@ -1,0 +1,9 @@
+survey_one: 
+  year: 1
+  times_helped: 4
+  intervention_made: true
+  contribution_made: false
+  recommendation_description: text about the recommendations made
+  efficacy_recommendations: []
+  safety_recommendations: []
+  contribution_to_care: []

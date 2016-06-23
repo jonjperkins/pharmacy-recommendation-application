@@ -1,5 +1,5 @@
 class SurveysController < ApplicationController
-    
+  
   def new
     @survey = Survey.new
   end
@@ -11,18 +11,18 @@ class SurveysController < ApplicationController
                          need to edit your submissions, use the edit button below."
       redirect_to @survey
     else
-      render 'new'
+      render 'surveys/new'
     end
   end
     
-    def index
-      @surveys = Survey.order(:year)
-        respond_to do |format|
-          format.html
-          format.csv { send_data @surveys.to_csv, 
-                       filename: "surveys - #{Date.today}.csv" }
-        end
-    end
+  def index
+    @surveys = Survey.order(:year)
+      respond_to do |format|
+        format.html
+        format.csv { send_data @surveys.to_csv, 
+                     filename: "surveys - #{Date.today}.csv" }
+      end
+  end
     
   def show
     @survey = Survey.find(params[:id])
@@ -54,5 +54,5 @@ class SurveysController < ApplicationController
                                        :contribution_to_care => [], 
                                        :safety_recommendations => [])
     end
-
+    
 end
