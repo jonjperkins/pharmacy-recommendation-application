@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607182419) do
+ActiveRecord::Schema.define(version: 20160721131852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,12 +22,25 @@ ActiveRecord::Schema.define(version: 20160607182419) do
     t.boolean  "intervention_made"
     t.boolean  "contribution_made"
     t.string   "recommendation_description"
-    t.string   "efficacy_recommendations"
     t.string   "safety_recommendations"
     t.string   "contribution_to_care"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
     t.integer  "user_id"
+    t.integer  "efficacy_dose_amount"
+    t.integer  "accepted_efficacy_dose_amount"
+    t.integer  "efficacy_dose_not_frequent_enough"
+    t.integer  "accepted_efficacy_dose_not_frequent_enough"
+    t.integer  "efficacy_indication_education"
+    t.integer  "accepted_efficacy_indication_education"
+    t.integer  "efficacy_therapeutic_selection"
+    t.integer  "accepted_efficacy_therapeutic_selection"
+    t.integer  "efficacy_immunization_recommendation"
+    t.integer  "accepted_efficacy_immunization_reccomendation"
+    t.integer  "none_today"
+    t.integer  "accepted_none_today"
+    t.integer  "efficacy_other"
+    t.integer  "accepted_efficacy_other"
   end
 
   create_table "users", force: :cascade do |t|

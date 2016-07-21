@@ -18,7 +18,10 @@
       <h4>Recommendation description:</h4>
       <%= @survey.recommendation_description %><br>
       <h4>Efficacy recommendations:</h4>
-      <%= @survey.efficacy_recommendations %><br>
+      <h5>Dose too low:</h5>
+      <%= @survey.efficacy_dose_amount %><br>
+      <h5>Number Accepted:</h5>
+      <%= @survey.accepted_efficacy_dose_amount %><br>
       <h4>Safety recommendations:</h4> 
       <%= @survey.safety_recommendations %><br>
       <h4>Contribution to care:</h4> 

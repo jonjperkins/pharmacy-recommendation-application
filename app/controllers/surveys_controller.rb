@@ -50,7 +50,8 @@ class SurveysController < ApplicationController
                                        :intervention_made,
                                        :contribution_made, 
                                        :recommendation_description,
-                                       :efficacy_recommendations => [], 
+                                       :efficacy_dose_amount,
+                                       :accepted_efficacy_dose_amount,
                                        :contribution_to_care => [], 
                                        :safety_recommendations => [])
     end

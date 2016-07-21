@@ -52,20 +52,12 @@
 <div class="row">
   <div class="col-lg-6 col-lg-offset-3 well"> 
     <h2>Efficacy recommendations:</h2><br>
-    <%= f.check_box("efficacy_recommendations", {:multiple => true}, "Dose too low", nil) %>
-    Dose too low<br>
-    <%= f.check_box("efficacy_recommendations", {:multiple => true}, "Dose not frequent enough", nil) %>
-    Dose not frequent enough<br>
-    <%= f.check_box("efficacy_recommendations", {:multiple => true}, "Indication education", nil) %>  
-    Indication education<br>
-    <%= f.check_box("efficacy_recommendations", {:multiple => true}, "Therapeutic selection", nil) %>  
-    Therapeutic selection<br>
-    <%= f.check_box("efficacy_recommendations", {:multiple => true}, "Immunization recommendation", nil) %>
-    Immunization recommendation<br>
-    <%= f.check_box("efficacy_recommendations", {:multiple => true}, "None today", nil) %>
-    None today<br>
-    Other:<br>
-    <%= f.text_area("efficacy_recommendations", {:multiple => true}) %>
+    <h4>Dose too low</h4>
+    <% f.label :efficacy_dose_amount %>
+    <%= f.number_field :efficacy_dose_amount %>
+    <h4>Recommendations Accepted?</h4>
+    <% f.label :accepted_efficacy_dose_amount %>
+    <%= f.number_field :accepted_efficacy_dose_amount %><br>
   </div>
 </div>
   
