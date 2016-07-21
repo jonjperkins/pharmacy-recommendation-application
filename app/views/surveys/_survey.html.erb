@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-lg-6 col-lg-offset-3 well">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well">
     <h2>Year in pharmacy school:</h2><br>  
 
     <%= f.radio_button :year, '1' %>
@@ -18,7 +18,7 @@
 </div>
   
 <div class="row">
-  <div class="col-lg-6 col-lg-offset-3 well">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well">
     <h2>How many times have you helped?</h2>
     <% f.label :times_helped %>
     <%= f.number_field :times_helped %><br>
@@ -26,7 +26,7 @@
 </div>
 
 <div class="row">
-  <div class="col-lg-6 col-lg-offset-3 well"> 
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well">
     <h2>Did you make an intervention?</h2>
         Check if 'yes'
     <%= f.check_box :intervention_made %><br>
@@ -34,7 +34,7 @@
 </div>
 
 <div class="row">
-  <div class="col-lg-6 col-lg-offset-3 well"> 
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well">
     <h2>Did you make a contribution?</h2>
         Check if 'yes'
     <%= f.check_box :contribution_made %><br>
@@ -42,7 +42,7 @@
 </div>
   
 <div class="row">
-  <div class="col-lg-6 col-lg-offset-3 well"> 
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well">
     <h2>Recommendation</h2>
     <%= f.label :recommendation_description, "Describe your recommendation" %><br>
     <%= f.text_area :recommendation_description %><br>
@@ -50,7 +50,7 @@
 </div>
   
 <div class="row">
-  <div class="col-lg-6 col-lg-offset-3 well"> 
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well" id="e_recommendations"> 
     <h2>Efficacy recommendations:</h2><br>
     <h4>Dose too low</h4>
     <% f.label :efficacy_dose_amount %>
@@ -62,7 +62,7 @@
 </div>
   
 <div class="row">
-  <div class="col-lg-6 col-lg-offset-3 well">     
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well"> 
     <h2>Safety recommendations:</h2><br>
     <%= f.check_box("safety_recommendations", {:multiple => true}, "Dose too high", nil) %>
     Dose too high<br>
@@ -84,7 +84,7 @@
 </div>
   
 <div class="row">
-  <div class="col-lg-6 col-lg-offset-3 well"> 
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well">
     <h2>Contribution to care:</h2><br>
     <%= f.check_box("contribution_to_care", {:multiple => true}, "Obtain medical history", nil) %>
     Obtained medical history<br>
