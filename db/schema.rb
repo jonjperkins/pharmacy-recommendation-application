@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160721131852) do
+ActiveRecord::Schema.define(version: 20160721152726) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,10 +37,10 @@ ActiveRecord::Schema.define(version: 20160721131852) do
     t.integer  "accepted_efficacy_therapeutic_selection"
     t.integer  "efficacy_immunization_recommendation"
     t.integer  "accepted_efficacy_immunization_reccomendation"
-    t.integer  "none_today"
     t.integer  "accepted_none_today"
     t.integer  "efficacy_other"
     t.integer  "accepted_efficacy_other"
+    t.boolean  "none_today"
   end
 
   create_table "users", force: :cascade do |t|

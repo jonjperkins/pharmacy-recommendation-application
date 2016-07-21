@@ -130,29 +130,29 @@
       <h4>I didn't make any recommendations</h4>
         <div class="row">
           <div class="col-xs-11">
-            <%= f.check_box("none_today", {:multiple => true}, 0, nil) %>
+            <%= f.check_box(:none_today) %>
             <small>No recommendations made</small>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-11">
-            <% f.label :accepted_efficacy_immunization_reccomendation %>
-            <%= f.number_field :accepted_efficacy_immunization_reccomendation %>
+            <% f.label :accepted_none_today %>
+            <%= f.number_field :accepted_none_today %>
             <small>Number made by physician</small>
           </div>
         </div>  
       <h4>Other</h4>
         <div class="row">
           <div class="col-xs-11">
-            <% f.label :efficacy_immunization_recommendation %>
-            <%= f.number_field :efficacy_immunization_recommendation %>
+            <% f.label :efficacy_other %>
+            <%= f.number_field :efficacy_other %>
             <small>Number of 'other' recommendations made</small>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-11">
-            <% f.label :accepted_efficacy_immunization_reccomendation %>
-            <%= f.number_field :accepted_efficacy_immunization_reccomendation %>
+            <% f.label :accepted_efficacy_other %>
+            <%= f.number_field :accepted_efficacy_other %>
             <small>Number accepted</small>
           </div>
         </div>  

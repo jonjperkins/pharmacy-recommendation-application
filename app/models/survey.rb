@@ -15,7 +15,12 @@ class Survey < ActiveRecord::Base
     
   def self.to_csv(options = {})
     attributes = %w{ year times_helped intervention_made contribution_made 
-                     recommendation_description efficacy_dose_amount accepted_efficacy_dose_amount 
+                     recommendation_description efficacy_dose_amount accepted_efficacy_dose_amount
+                     efficacy_dose_not_frequent_enough accepted_efficacy_dose_not_frequent_enough
+                     efficacy_indication_education accepted_efficacy_indication_education
+                     efficacy_therapeutic_selection accepted_efficacy_therapeutic_selection
+                     efficacy_immunization_recommendation accepted_efficacy_immunization_reccomendation
+                     none_today accepted_none_today efficacy_other accepted_efficacy_other
                      safety_recommendations contribution_to_care }
     CSV.generate(headers: true) do |csv|
       csv << attributes

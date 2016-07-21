@@ -52,6 +52,16 @@ class SurveysController < ApplicationController
                                        :recommendation_description,
                                        :efficacy_dose_amount,
                                        :accepted_efficacy_dose_amount,
+                                       :efficacy_dose_not_frequent_enough,
+                                       :accepted_efficacy_dose_not_frequent_enough,
+                                       :efficacy_indication_education,
+                                       :accepted_efficacy_indication_education,
+                                       :efficacy_therapeutic_selection,
+                                       :accepted_efficacy_therapeutic_selection,
+                                       :efficacy_immunization_recommendation,
+                                       :accepted_efficacy_immunization_reccomendation,
+                                       :none_today, :accepted_none_today,
+                                       :efficacy_other, :accepted_efficacy_other,
                                        :contribution_to_care => [], 
                                        :safety_recommendations => [])
     end
