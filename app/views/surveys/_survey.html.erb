@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well" id="year">
     <h2>Year in pharmacy school:</h2><br>  
 
     <%= f.radio_button :year, '1' %>
@@ -18,7 +18,7 @@
 </div>
   
 <div class="row">
-  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well" id="times_helped">
     <h2>How many times have you helped?</h2>
     <% f.label :times_helped %>
     <%= f.number_field :times_helped %><br>
@@ -26,7 +26,7 @@
 </div>
 
 <div class="row">
-  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well" id="intervention">
     <h2>Did you make an intervention?</h2>
         Check if 'yes'
     <%= f.check_box :intervention_made %><br>
@@ -34,7 +34,7 @@
 </div>
 
 <div class="row">
-  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well" id="contribution">
     <h2>Did you make a contribution?</h2>
         Check if 'yes'
     <%= f.check_box :contribution_made %><br>
@@ -42,10 +42,10 @@
 </div>
   
 <div class="row">
-  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well">
-    <h2>Recommendation</h2>
-    <%= f.label :recommendation_description, "Describe your recommendation" %><br>
-    <%= f.text_area :recommendation_description %><br>
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 well" id="describe_recommendation">
+    <h2>Recommendation description</h2>
+      <%= f.text_area :recommendation_description, :rows => '15', :class => 'col-xs-12', 
+                    :placeholder => 'Tell us about your recommendations here.' %><br>
   </div>
 </div>
   
@@ -146,7 +146,7 @@
           <div class="col-xs-11">
             <% f.label :efficacy_other %>
             <%= f.number_field :efficacy_other %>
-            <small>Number of 'other' recommendations made</small>
+            <small>Number of recommendations made</small>
           </div>
         </div>
         <div class="row">
@@ -177,7 +177,8 @@
     <%= f.check_box("safety_recommendations", {:multiple => true}, "None today", nil) %>
     None today<br>
     Other:<br>
-    <%= f.text_area("safety_recommendations", {:multiple => true}) %><br> 
+    <%= f.text_area :safety_recommendations, :multiple => true, :rows => '5', :class => 'col-xs-12', 
+                    :placeholder => 'If you made any safety recommendations not listed above, tell us about it here.' %><br>
   </div>
 </div>
   
@@ -197,7 +198,8 @@
     <%= f.check_box("contribution_to_care", {:multiple => true}, "Counseled patient on medication", nil) %>
     Counseled patient on medication<br>
     Other:<br>
-    <%= f.text_area("contribution_to_care", {:multiple => true}) %>
+    <%= f.text_area :safety_recommendations, :multiple => true, :rows => '5', :class => 'col-xs-12', 
+                    :placeholder => 'If you made any conbributions to care not listed above, tell us about it here.' %><br>
   </div>
 </div>
       

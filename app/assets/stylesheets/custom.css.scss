@@ -1,4 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-#e_recommendations input { width: 40px; }
+#e_recommendations {
+    input { 
+        width: 50px; 
+    }
+}
+
+#times_helped {
+    input {
+        width: 50px;
+    }
+}
